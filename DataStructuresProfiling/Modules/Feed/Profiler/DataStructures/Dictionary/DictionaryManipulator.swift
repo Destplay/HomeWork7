@@ -11,9 +11,8 @@ import Foundation
 /**
  * A protocol which will allow the easy swapping out of dictionary subtypes
  */
-protocol DictionaryManipulator {
+protocol DictionaryManipulator: Manipulator {
     func dictHasEntries() -> Bool
-    func setupWithEntryCount(_ count: Int) -> TimeInterval
     func add1Entry() -> TimeInterval
     func add5Entries() -> TimeInterval
     func add10Entries() -> TimeInterval

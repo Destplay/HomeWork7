@@ -12,5 +12,6 @@ class SessionSummaryViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
 }

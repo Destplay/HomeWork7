@@ -10,11 +10,14 @@ import UIKit
 
 class FeedTableViewCell: UITableViewCell {
     
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var timeLabel: UILabel!
+    
     static let reuseID = String(describing: FeedTableViewCell.self)
     
-    @IBOutlet weak var nameLabel: UILabel!
-    
-    func updateCell(name: String) {
-        nameLabel.text = name
+    func updateCell(name: String, time: String, color: UIColor) {
+        self.nameLabel.text = name
+        self.timeLabel?.text = time
+        self.timeLabel?.textColor = color
     }
 }

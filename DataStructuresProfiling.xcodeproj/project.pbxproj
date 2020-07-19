@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		64BE133724C3FF25006AD5FE /* JobProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BE133624C3FF25006AD5FE /* JobProvider.swift */; };
 		64FE33F724AC3FC5001148FA /* Suffix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FE33F624AC3FC5001148FA /* Suffix.swift */; };
 		64FE33F924AC4473001148FA /* SuffixArrayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FE33F824AC4473001148FA /* SuffixArrayViewController.swift */; };
 		64FE33FC24AC49E3001148FA /* SwiftSuffixArrayManipulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FE33FB24AC49E3001148FA /* SwiftSuffixArrayManipulator.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		64BE133624C3FF25006AD5FE /* JobProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobProvider.swift; sourceTree = "<group>"; };
 		64FE33F624AC3FC5001148FA /* Suffix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Suffix.swift; sourceTree = "<group>"; };
 		64FE33F824AC4473001148FA /* SuffixArrayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuffixArrayViewController.swift; sourceTree = "<group>"; };
 		64FE33FB24AC49E3001148FA /* SwiftSuffixArrayManipulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftSuffixArrayManipulator.swift; sourceTree = "<group>"; };
@@ -189,6 +191,8 @@
 			isa = PBXGroup;
 			children = (
 				F719AE2922C5490B009D08D3 /* FeedDataProvider.swift */,
+				F719AE4C22C54944009D08D3 /* AlgoProvider.swift */,
+				64BE133624C3FF25006AD5FE /* JobProvider.swift */,
 				F719AE2A22C5490B009D08D3 /* FeedData.swift */,
 				64FE33F624AC3FC5001148FA /* Suffix.swift */,
 			);
@@ -231,7 +235,6 @@
 		F719AE4B22C54935009D08D3 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				F719AE4C22C54944009D08D3 /* AlgoProvider.swift */,
 				F719AE4D22C54944009D08D3 /* Services.swift */,
 			);
 			path = Services;
@@ -328,6 +331,7 @@
 				F719AE2022C548CA009D08D3 /* ArrayManipulator.swift in Sources */,
 				F719AE2422C548CA009D08D3 /* DictionaryManipulator.swift in Sources */,
 				F719AE4122C5490B009D08D3 /* SessionSummaryViewController.swift in Sources */,
+				64BE133724C3FF25006AD5FE /* JobProvider.swift in Sources */,
 				F719AE2122C548CA009D08D3 /* SwiftArrayManipulator.swift in Sources */,
 				F719AE4022C5490B009D08D3 /* FeedThirdViewController.swift in Sources */,
 				F719AE0022C54873009D08D3 /* AppDelegate.swift in Sources */,

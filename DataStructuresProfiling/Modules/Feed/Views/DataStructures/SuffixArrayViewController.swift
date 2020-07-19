@@ -52,7 +52,7 @@ class SuffixArrayViewController: DataStructuresViewController {
     //MARK: Superclass creation/testing overrides
     
     override func create(_ size: Int) {
-        self.creationTime = self.suffixArrayManipulator.setupWithEntryCount(size)
+        self.creationTime = self.suffixArrayManipulator.setupWithObjectCount(size)
     }
     
     override func test() {

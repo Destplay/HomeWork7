@@ -19,7 +19,7 @@ class SwiftSuffixArrayManipulator: SuffixArrayManipulator {
     
     //MARK: Setup
     
-    func setupWithEntryCount(_ count: Int) -> TimeInterval {
+    func setupWithObjectCount(_ count: Int) -> TimeInterval {
         return Profiler.runClosureForTime() {
             for _ in 0 ..< count {
                 guard let item = self.getAllTuplesWithSort().randomElement() else { return }

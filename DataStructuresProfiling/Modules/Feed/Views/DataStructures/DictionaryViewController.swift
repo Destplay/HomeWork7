@@ -48,7 +48,7 @@ class DictionaryViewController: DataStructuresViewController {
     //MARK: Superclass creation/testing overrides
     
     override func create(_ size: Int) {
-        creationTime = dictionaryManipulator.setupWithEntryCount(size)
+        creationTime = dictionaryManipulator.setupWithObjectCount(size)
     }
     
     override func test() {

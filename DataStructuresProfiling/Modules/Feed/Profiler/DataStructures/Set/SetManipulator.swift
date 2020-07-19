@@ -8,9 +8,8 @@
 
 import Foundation
 
-protocol SetManipulator {
+protocol SetManipulator: Manipulator {
     func setHasObjects() -> Bool
-    func setupWithObjectCount(_ objectCount: Int) -> TimeInterval
     func add1Object() -> TimeInterval
     func add5Objects() -> TimeInterval
     func add10Objects() -> TimeInterval

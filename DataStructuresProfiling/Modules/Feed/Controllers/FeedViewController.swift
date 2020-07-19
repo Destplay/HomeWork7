@@ -15,6 +15,7 @@ class FeedViewController: UIViewController {
     fileprivate let feedData = Services.feedProvider.feedMockData()
     fileprivate var filteredFeedData = [FeedData]()
     private let searchController = UISearchController(searchResultsController: nil)
+    private var timeIntervals: [TimeInterval]?
     private var searchBarIsEmpty: Bool {
         guard let text = self.searchController.searchBar.text else { return false }
         return text.isEmpty
@@ -31,6 +32,16 @@ class FeedViewController: UIViewController {
         self.searchController.searchBar.placeholder = "Поиск"
         self.navigationItem.searchController = self.searchController
         self.definesPresentationContext = true
+        let button = UIButton(type: .contactAdd)
+        button.addTarget(self, action: #selector(self.onClickButton), for: .touchDown)
+        self.feedTableView.tableHeaderView = button
+        
+        self.timeIntervals = [0.0, 0.0, 0.0, 0.0]
+    }
+    
+    @objc func onClickButton() {
+        self.timeIntervals = JobScheduler().getTimeIntervals()
+        self.feedTableView.reloadData()
     }
 }
 
@@ -59,8 +70,19 @@ extension FeedViewController: UITableViewDataSource {
         
         let cell = self.feedTableView.dequeueReusableCell(withIdentifier: FeedTableViewCell.reuseID, for: indexPath) as? FeedTableViewCell
         guard let feedCell = cell else { return UITableViewCell() }
-        
-        feedCell.updateCell(name: item.name)
+        let time = self.timeIntervals?[indexPath.row]
+        let color: UIColor!
+        switch time {
+            case 0.0:
+                color = .gray
+            case self.timeIntervals?.max():
+                color = .green
+            case self.timeIntervals?.min():
+                color = .red
+            default:
+                color = .black
+        }
+        feedCell.updateCell(name: item.name, time: time?.description ?? "", color: color)
         
         return feedCell
     }

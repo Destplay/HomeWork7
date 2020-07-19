@@ -22,7 +22,7 @@ class SwiftDictionaryManipulator: DictionaryManipulator {
     
     //MARK: Setup
     
-    func setupWithEntryCount(_ count: Int) -> TimeInterval {
+    func setupWithObjectCount(_ count: Int) -> TimeInterval {
         return Profiler.runClosureForTime() {
             for i in 0 ..< count {
                 self.intDictionary.updateValue(i, forKey: i)

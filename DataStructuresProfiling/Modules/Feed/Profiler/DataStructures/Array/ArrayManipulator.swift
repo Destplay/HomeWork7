@@ -11,9 +11,8 @@ import Foundation
 /**
  * A protocol which will allow the easy swapping out of array subtypes
  */
-protocol ArrayManipulator {
+protocol ArrayManipulator: Manipulator {
     func arrayHasObjects() -> Bool
-    func setupWithObjectCount(_ count: Int) -> TimeInterval
     func insertNewObjectAtBeginning() -> TimeInterval
     func insertNewObjectInMiddle() -> TimeInterval
     func addNewObjectAtEnd() -> TimeInterval 
